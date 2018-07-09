@@ -21,7 +21,7 @@ public class CCGeneratorController {
 	private CreditCardGeneratorService cardGeneratorService;
 	
 	@GetMapping(value = "/CCEngine/{ccType}/{totalCount}")
-	public List<CreditCardDetailsImpl> generateCCNumbersWithExpiry(@PathVariable("ccType") String ccType, @PathVariable("totalCount") int totalCount) throws InvalidCCType, BadRequestException, TechnicalException {
+	public List<CreditCardDetailsImpl> generateCCNumbersWithExpiry(@PathVariable("ccType") String ccType, @PathVariable("totalCount") int totalCount) throws InvalidCCType, BadRequestException, TechnicalException, InterruptedException {
 		
 		return cardGeneratorService.getCreditCardsForType(ccType, totalCount);
 		

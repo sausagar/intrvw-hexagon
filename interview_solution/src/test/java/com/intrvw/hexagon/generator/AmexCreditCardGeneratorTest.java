@@ -16,13 +16,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.intrvw.hexagon.conf.CCSuffix;
 import com.intrvw.hexagon.exceptions.TechnicalException;
 import com.intrvw.hexagon.model.CreditCardDetailsImpl;
-import com.intrvw.hexagon.service.generator.VisaCreditCardGenerator;
+import com.intrvw.hexagon.service.generator.AmexCreditCardGenerator;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-public class VisaCreditCardGeneratorTest {
+public class AmexCreditCardGeneratorTest {
 
 	@InjectMocks
-	private VisaCreditCardGenerator visaCreditCardGeneratorTest;
+	private AmexCreditCardGenerator amexCreditCardGenerator;
 	
 	@Mock
 	private CCSuffix ccSuffix;
@@ -31,18 +31,18 @@ public class VisaCreditCardGeneratorTest {
 	@Test
 	public void generateCCNumber() {
 		Mockito.when(
-          ccSuffix.getVisaSuffix() )
-				.thenReturn("4");
-		assertTrue(visaCreditCardGeneratorTest.generateCCNumber().startsWith("4"));
+          ccSuffix.getAmexSuffix() )
+				.thenReturn("37");
+		assertTrue(amexCreditCardGenerator.generateCCNumber().startsWith("37"));
 	}
 	
 	@Test
 	public void filterAndGenerateValidCreditCardsTest() throws TechnicalException, InterruptedException {
 		Mockito.when(
-		          ccSuffix.getVisaSuffix() )
-						.thenReturn("4");
-		List<String> ccNumbers = new ArrayList<>(Arrays.asList("4565656","45655456", "123455","sasds"));
-		List<CreditCardDetailsImpl> filteredList = visaCreditCardGeneratorTest.filterAndGenerateValidCreditCards(ccNumbers);
+		          ccSuffix.getAmexSuffix() )
+						.thenReturn("37");
+		List<String> ccNumbers = new ArrayList<>(Arrays.asList("4565656","45655456", "373455","37434343"));
+		List<CreditCardDetailsImpl> filteredList = amexCreditCardGenerator.filterAndGenerateValidCreditCards(ccNumbers);
 		assertTrue(filteredList.size() == 2);
 		
 		

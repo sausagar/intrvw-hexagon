@@ -7,6 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -39,7 +40,7 @@ public class VisaCreditCardGenerator implements CreditCardGenerator {
 
 	@Override
 	public List<CreditCardDetailsImpl> filterAndGenerateValidCreditCards(final List<String> ccNumbers)
-			throws TechnicalException {
+			throws TechnicalException, InterruptedException {
 
 		final List<CreditCardDetailsImpl> creditCardList = new CopyOnWriteArrayList<>();
 
@@ -57,6 +58,12 @@ public class VisaCreditCardGenerator implements CreditCardGenerator {
 			});
 
 		}
+		
+		executor.shutdown();
+		
+			while (!executor.awaitTermination(20L, TimeUnit.SECONDS)) {
+			    // wait for termination
+			}
 		return Collections.unmodifiableList(creditCardList);
 	}
 

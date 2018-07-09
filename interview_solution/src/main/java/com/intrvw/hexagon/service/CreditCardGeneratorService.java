@@ -23,7 +23,7 @@ public class CreditCardGeneratorService {
 	}
 
 	public List<CreditCardDetailsImpl> getCreditCardsForType(String type, int totalCount)
-			throws InvalidCCType, BadRequestException, TechnicalException {
+			throws InvalidCCType, BadRequestException, TechnicalException, InterruptedException {
 
 		if (totalCount < 1) {
 			throw new BadRequestException("Count should be >= 1");

@@ -9,6 +9,6 @@ public interface CreditCardGenerator {
 
 	public String generateCCNumber();
 
-	List<CreditCardDetailsImpl> filterAndGenerateValidCreditCards(List<String> ccNumbers) throws TechnicalException;
+	List<CreditCardDetailsImpl> filterAndGenerateValidCreditCards(List<String> ccNumbers) throws TechnicalException, InterruptedException;
 
 }

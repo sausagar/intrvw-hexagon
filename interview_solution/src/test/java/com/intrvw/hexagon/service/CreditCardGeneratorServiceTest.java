@@ -31,7 +31,7 @@ public class CreditCardGeneratorServiceTest {
 	private VisaCreditCardGenerator visaCreditCardGenerator;
 	
 	@Test
-	public void getCreditCardsForTypeTest() throws InvalidCCType, BadRequestException, TechnicalException {
+	public void getCreditCardsForTypeTest() throws InvalidCCType, BadRequestException, TechnicalException, InterruptedException {
 		
 		Mockito.when(
 				ccGeneratorResolver.getCCGeneratorForType(Mockito.anyString()))
@@ -51,7 +51,7 @@ public class CreditCardGeneratorServiceTest {
 	}
 
 	@Test(expected = BadRequestException.class)
-	public void failCreditCardsForTypeWithNegativeCount() throws InvalidCCType, BadRequestException, TechnicalException {
+	public void failCreditCardsForTypeWithNegativeCount() throws InvalidCCType, BadRequestException, TechnicalException, InterruptedException {
 		
 		Mockito.when(
 				ccGeneratorResolver.getCCGeneratorForType(Mockito.anyString()))
