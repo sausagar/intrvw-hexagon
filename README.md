@@ -6,6 +6,7 @@ Name : Saurabh Sagar
 Years Of Experience : 8 Years 3 months
 
 ### Section 2
+#### Framework : Spring Boot
 #### Build IDE : 
  ###### Spring Tool Suite 
  ######   Version: 3.9.2.RELEASE
@@ -18,11 +19,20 @@ Years Of Experience : 8 Years 3 months
 
 ### Output snaps
 ![Visa] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_visa.png)
+
 ![amex] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_amex.png)
 
 
 ### Junit coverage
-![junit] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/test_coverage.png)
+![junit] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/JUnit_coverage.png)
 
+### Application :
+
+To start the application please do git clone followed by gradlew bootrun.
+
+#### Endpoints
+###### GET : http://localhost:8080/CCEngine/{ccType}/{count}
+
+where ccType supported currently is either visa or amex and count can be any positive natural number.
 
 ### Please note: Currently the code works only for VISA and AMEX. For any other types it can be extended. 
