@@ -23,7 +23,7 @@ import com.intrvw.hexagon.service.CardTypes;
 public class AmexCreditCardGenerator implements CreditCardGenerator {
 
 	private CCSuffix ccSuffix;
-	private ExecutorService executor = Executors.newFixedThreadPool(4);
+	
 	private Lock lock = new ReentrantLock();
 
 	@Autowired
@@ -42,7 +42,7 @@ public class AmexCreditCardGenerator implements CreditCardGenerator {
 			throws TechnicalException, InterruptedException {
 
 		final List<CreditCardDetailsImpl> creditCardList = new CopyOnWriteArrayList<>();
-
+		final ExecutorService executor = Executors.newFixedThreadPool(4);
 		for (String ccNumber : ccNumbers) {
 			executor.submit(() -> {
 				try {
