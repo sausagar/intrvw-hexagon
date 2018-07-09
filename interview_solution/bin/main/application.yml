@@ -1,7 +1,0 @@
-cc:
-  suffix: 
-    visa: 4
-    mastercard: 5
-    amex: 37
-    discovercard: 6 
-    
