@@ -15,11 +15,12 @@ Years Of Experience : 8 Years 3 months
 #### JDK Version : 1.8.0_121
 
 ### SonarLint Analysis Report
-![ SonarLint ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/sonarqube_report.png)
+![ SonarLint ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/SonarQube_report.png)
 
-### Output snaps
+### Output snaps VISA
 ![ Visa ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_visa.png)
 
+### Output snaps AMEX
 ![ amex ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_amex.png)
 
 
