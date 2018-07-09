@@ -15,16 +15,16 @@ Years Of Experience : 8 Years 3 months
 #### JDK Version : 1.8.0_121
 
 ### SonarLint Analysis Report
-![SonarLint] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/sonarqube_report.png)
+![ SonarLint ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/sonarqube_report.png)
 
 ### Output snaps
-![Visa] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_visa.png)
+![ Visa ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_visa.png)
 
-![amex] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_amex.png)
+![ amex ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/output_amex.png)
 
 
 ### Junit coverage
-![junit] (https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/JUnit_coverage.png)
+![ junit ](https://github.com/sausagar/intrvw-hexagon/blob/master/interview_snapshots/JUnit_coverage.png)
 
 ### Application :
 
